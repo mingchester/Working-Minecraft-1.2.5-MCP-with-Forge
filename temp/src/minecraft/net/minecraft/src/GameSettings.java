@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -265,7 +266,7 @@ public class GameSettings {
          BufferedReader var1 = new BufferedReader(new FileReader(this.field_6522_B));
          String var2 = "";
 
-         while((var2 = var1.readLine()) != null) {
+         while((var2 = BoundedLineReader.readLine(var1, 5_000_000)) != null) {
             try {
                String[] var3 = var2.split(":");
                if(var3[0].equals("music")) {

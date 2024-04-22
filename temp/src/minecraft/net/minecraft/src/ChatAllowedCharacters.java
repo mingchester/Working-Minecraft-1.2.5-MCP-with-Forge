@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -16,7 +17,7 @@ public class ChatAllowedCharacters {
          BufferedReader var1 = new BufferedReader(new InputStreamReader(ChatAllowedCharacters.class.getResourceAsStream("/font.txt"), "UTF-8"));
          String var2 = "";
 
-         while((var2 = var1.readLine()) != null) {
+         while((var2 = BoundedLineReader.readLine(var1, 5_000_000)) != null) {
             if(!var2.startsWith("#")) {
                var0 = var0 + var2;
             }

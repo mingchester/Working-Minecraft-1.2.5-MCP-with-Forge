@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -38,7 +39,7 @@ public class GuiMainMenu extends GuiScreen {
          BufferedReader var2 = new BufferedReader(new InputStreamReader(GuiMainMenu.class.getResourceAsStream("/title/splashes.txt"), Charset.forName("UTF-8")));
          String var3 = "";
 
-         while((var3 = var2.readLine()) != null) {
+         while((var3 = BoundedLineReader.readLine(var2, 5_000_000)) != null) {
             var3 = var3.trim();
             if(var3.length() > 0) {
                var1.add(var3);

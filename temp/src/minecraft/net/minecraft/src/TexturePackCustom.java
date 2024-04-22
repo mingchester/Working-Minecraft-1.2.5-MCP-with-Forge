@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
@@ -44,8 +45,8 @@ public class TexturePackCustom extends TexturePackBase {
          try {
             var3 = var2.getInputStream(var2.getEntry("pack.txt"));
             BufferedReader var4 = new BufferedReader(new InputStreamReader(var3));
-            this.field_6486_b = this.func_6492_b(var4.readLine());
-            this.field_6489_c = this.func_6492_b(var4.readLine());
+            this.field_6486_b = this.func_6492_b(BoundedLineReader.readLine(var4, 5_000_000));
+            this.field_6489_c = this.func_6492_b(BoundedLineReader.readLine(var4, 5_000_000));
             var4.close();
             var3.close();
          } catch (Exception var20) {
