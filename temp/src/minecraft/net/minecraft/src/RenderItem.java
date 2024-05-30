@@ -28,7 +28,7 @@ public class RenderItem extends Render {
    }
 
    public void func_165_a(EntityItem p_165_1_, double p_165_2_, double p_165_4_, double p_165_6_, float p_165_8_, float p_165_9_) {
-      this.field_200_e.setSeed(187L);
+      this.field_200_e.setSeed(System.currentTimeMillis());
       ItemStack var10 = p_165_1_.field_801_a;
       GL11.glPushMatrix();
       float var11 = MathHelper.func_1106_a(((float)p_165_1_.field_800_b + p_165_9_) / 10.0F + p_165_1_.field_804_d) * 0.1F + 0.1F;

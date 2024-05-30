@@ -185,7 +185,7 @@ public class GuiAchievements extends GuiScreen {
          GL11.glColor4f(var23, var23, var23, 1.0F);
 
          for(var24 = 0; var24 * 16 - var14 < 224; ++var24) {
-            var21.setSeed((long)(1234 + var12 + var24));
+            var21.setSeed(System.currentTimeMillis());
             var21.nextInt();
             var25 = var21.nextInt(1 + var13 + var22) + (var13 + var22) / 2;
             var26 = Block.field_393_F.field_378_bb;

@@ -269,7 +269,7 @@ public class GuiAchievements extends GuiScreen
 
             for (var24 = 0; var24 * 16 - var14 < 224; ++var24)
             {
-                var21.setSeed((long)(1234 + var12 + var24));
+                var21.setSeed(System.currentTimeMillis());
                 var21.nextInt();
                 var25 = var21.nextInt(1 + var13 + var22) + (var13 + var22) / 2;
                 var26 = Block.sand.blockIndexInTexture;

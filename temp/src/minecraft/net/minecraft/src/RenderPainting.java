@@ -16,7 +16,7 @@ public class RenderPainting extends Render {
 
 
    public void func_158_a(EntityPainting p_158_1_, double p_158_2_, double p_158_4_, double p_158_6_, float p_158_8_, float p_158_9_) {
-      this.field_199_d.setSeed(187L);
+      this.field_199_d.setSeed(System.currentTimeMillis());
       GL11.glPushMatrix();
       GL11.glTranslatef((float)p_158_2_, (float)p_158_4_, (float)p_158_6_);
       GL11.glRotatef(p_158_8_, 0.0F, 1.0F, 0.0F);

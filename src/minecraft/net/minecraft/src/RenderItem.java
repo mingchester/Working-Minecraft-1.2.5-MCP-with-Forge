@@ -29,7 +29,7 @@ public class RenderItem extends Render
      */
     public void doRenderItem(EntityItem par1EntityItem, double par2, double par4, double par6, float par8, float par9)
     {
-        this.random.setSeed(187L);
+        this.random.setSeed(System.currentTimeMillis());
         ItemStack var10 = par1EntityItem.item;
         GL11.glPushMatrix();
         float var11 = MathHelper.sin(((float)par1EntityItem.age + par9) / 10.0F + par1EntityItem.field_804_d) * 0.1F + 0.1F;
@@ -105,7 +105,7 @@ public class RenderItem extends Render
 
                 for (var14 = 0; var14 < var10.getItem().getRenderPasses(var10.getItemDamage()); ++var14)
                 {
-                    this.random.setSeed(187L); //Fixes Vanilla bug where layers would not render aligns properly.
+                    this.random.setSeed(System.currentTimeMillis()); //Fixes Vanilla bug where layers would not render aligns properly.
                     var15 = var10.getItem().func_46057_a(var10.getItemDamage(), var14);
                     var16 = 1.0F;
 
