@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -24,7 +25,7 @@ import org.lwjgl.util.glu.GLU;
 
 public class GuiMainMenu extends GuiScreen {
 
-   private static final Random field_6463_h = new Random();
+   private static final Random field_6463_h = new SecureRandom();
    private float field_989_j = 0.0F;
    private String field_6462_l = "missingno";
    private GuiButton field_25096_l;

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPainting;
@@ -12,7 +13,7 @@ import org.lwjgl.opengl.GL11;
 
 public class RenderPainting extends Render {
 
-   private Random field_199_d = new Random();
+   private Random field_199_d = new SecureRandom();
 
 
    public void func_158_a(EntityPainting p_158_1_, double p_158_2_, double p_158_4_, double p_158_6_, float p_158_8_, float p_158_9_) {

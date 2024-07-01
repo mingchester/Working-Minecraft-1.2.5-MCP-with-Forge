@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -25,7 +26,7 @@ public class MapGenStronghold extends MapGenStructure {
 
    protected boolean func_35628_a(int p_35628_1_, int p_35628_2_) {
       if(!this.field_35632_f) {
-         Random var3 = new Random();
+         Random var3 = new SecureRandom();
          var3.setSeed(this.field_35625_d.func_22138_q());
          double var4 = var3.nextDouble() * 3.141592653589793D * 2.0D;
 

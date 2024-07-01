@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +13,7 @@ public class Explosion
 {
     /** whether or not the explosion sets fire to blocks around it */
     public boolean isFlaming = false;
-    private Random explosionRNG = new Random();
+    private Random explosionRNG = new SecureRandom();
     private World worldObj;
     public double explosionX;
     public double explosionY;

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.TileEntity;
@@ -16,7 +17,7 @@ public class TileEntityEnchantmentTable extends TileEntity {
    public float field_40069_h;
    public float field_40067_p;
    public float field_40066_q;
-   private static Random field_40064_r = new Random();
+   private static Random field_40064_r = new SecureRandom();
 
 
    public void func_475_b() {

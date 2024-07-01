@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -24,7 +25,7 @@ public class ContainerEnchantment extends Container {
    private int field_40241_i;
    private int field_40238_j;
    private int field_40239_k;
-   private Random field_40237_l = new Random();
+   private Random field_40237_l = new SecureRandom();
    public long field_40234_b;
    public int[] field_40235_c = new int[3];
 
