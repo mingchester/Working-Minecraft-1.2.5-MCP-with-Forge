@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
@@ -676,7 +677,7 @@ public class NetClientHandler extends NetHandler
             {
                 URL var4 = new URL("http://session.minecraft.net/game/joinserver.jsp?user=" + this.mc.session.username + "&sessionId=" + this.mc.session.sessionId + "&serverId=" + par1Packet2Handshake.username);
                 BufferedReader var5 = new BufferedReader(new InputStreamReader(var4.openStream()));
-                String var6 = var5.readLine();
+                String var6 = BoundedLineReader.readLine(var5, 5_000_000);
                 var5.close();
 
                 if (var6.equalsIgnoreCase("ok"))

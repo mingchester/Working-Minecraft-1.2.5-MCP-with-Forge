@@ -5,6 +5,7 @@
 
 package net.minecraft.src.forge;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -192,7 +193,7 @@ public class Configuration
 
                 while (true)
                 {
-                    line = buffer.readLine();
+                    line = BoundedLineReader.readLine(buffer, 5_000_000);
 
                     if (line == null)
                     {
