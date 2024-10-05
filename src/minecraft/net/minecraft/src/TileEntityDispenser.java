@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class TileEntityDispenser extends TileEntity implements IInventory
@@ -9,7 +10,7 @@ public class TileEntityDispenser extends TileEntity implements IInventory
     /**
      * random number generator for instance. Used in random item stack selection.
      */
-    private Random dispenserRandom = new Random();
+    private Random dispenserRandom = new SecureRandom();
 
     /**
      * Returns the number of slots in the inventory.

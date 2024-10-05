@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.ChatAllowedCharacters;
 import net.minecraft.src.GuiButton;
@@ -124,7 +125,7 @@ public class GuiCreateWorld extends GuiScreen {
             }
 
             this.field_22130_l = true;
-            long var2 = (new Random()).nextLong();
+            long var2 = (new SecureRandom()).nextLong();
             String var4 = this.field_22133_i.func_22071_a();
             if(!MathHelper.func_22282_a(var4)) {
                try {

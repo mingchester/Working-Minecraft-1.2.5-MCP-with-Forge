@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class TileEntityEnchantmentTable extends TileEntity
@@ -23,7 +24,7 @@ public class TileEntityEnchantmentTable extends TileEntity
     public float bookRotation2;
     public float bookRotationPrev;
     public float bookRotation;
-    private static Random rand = new Random();
+    private static Random rand = new SecureRandom();
 
     /**
      * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count

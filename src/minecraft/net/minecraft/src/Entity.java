@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -202,7 +203,7 @@ public abstract class Entity
         this.stepHeight = 0.0F;
         this.noClip = false;
         this.entityCollisionReduction = 0.0F;
-        this.rand = new Random();
+        this.rand = new SecureRandom();
         this.ticksExisted = 0;
         this.fireResistance = 1;
         this.fire = 0;

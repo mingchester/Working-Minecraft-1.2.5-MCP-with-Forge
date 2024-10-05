@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -8,7 +9,7 @@ public class RenderEnderman extends RenderLiving
 {
     /** The model of the enderman */
     private ModelEnderman endermanModel;
-    private Random rnd = new Random();
+    private Random rnd = new SecureRandom();
 
     public RenderEnderman()
     {

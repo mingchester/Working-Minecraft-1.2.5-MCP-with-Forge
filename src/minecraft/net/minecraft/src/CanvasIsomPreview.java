@@ -15,6 +15,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferStrategy;
 import java.awt.image.ImageObserver;
 import java.io.File;
+import java.security.SecureRandom;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -113,7 +114,7 @@ public class CanvasIsomPreview extends Canvas implements KeyListener, MouseListe
     public void loadLevel(String par1Str)
     {
         this.field_1785_i = this.field_1784_j = 0;
-        this.level = new World(new SaveHandler(new File(this.workDir, "saves"), par1Str, false), par1Str, new WorldSettings((new Random()).nextLong(), 0, true, false, WorldType.DEFAULT));
+        this.level = new World(new SaveHandler(new File(this.workDir, "saves"), par1Str, false), par1Str, new WorldSettings((new SecureRandom()).nextLong(), 0, true, false, WorldType.DEFAULT));
         this.level.skylightSubtracted = 0;
         List var2 = this.zonesToRender;
 
