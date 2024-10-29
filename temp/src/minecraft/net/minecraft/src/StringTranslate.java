@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,7 +32,7 @@ public class StringTranslate {
       try {
          BufferedReader var2 = new BufferedReader(new InputStreamReader(StringTranslate.class.getResourceAsStream("/lang/languages.txt"), "UTF-8"));
 
-         for(String var3 = var2.readLine(); var3 != null; var3 = var2.readLine()) {
+         for(String var3 = BoundedLineReader.readLine(var2, 5_000_000); var3 != null; var3 = BoundedLineReader.readLine(var2, 5_000_000)) {
             String[] var4 = var3.split("=");
             if(var4 != null && var4.length == 2) {
                var1.put(var4[0], var4[1]);
@@ -52,7 +53,7 @@ public class StringTranslate {
    private void func_44025_a(Properties p_44025_1_, String p_44025_2_) throws IOException {
       BufferedReader var3 = new BufferedReader(new InputStreamReader(StringTranslate.class.getResourceAsStream("/lang/" + p_44025_2_ + ".lang"), "UTF-8"));
 
-      for(String var4 = var3.readLine(); var4 != null; var4 = var3.readLine()) {
+      for(String var4 = BoundedLineReader.readLine(var3, 5_000_000); var4 != null; var4 = BoundedLineReader.readLine(var3, 5_000_000)) {
          var4 = var4.trim();
          if(!var4.startsWith("#")) {
             String[] var5 = var4.split("=");

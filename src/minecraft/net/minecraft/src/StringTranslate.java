@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -46,7 +47,7 @@ public class StringTranslate
         {
             BufferedReader var2 = new BufferedReader(new InputStreamReader(StringTranslate.class.getResourceAsStream("/lang/languages.txt"), "UTF-8"));
 
-            for (String var3 = var2.readLine(); var3 != null; var3 = var2.readLine())
+            for (String var3 = BoundedLineReader.readLine(var2, 5_000_000); var3 != null; var3 = BoundedLineReader.readLine(var2, 5_000_000))
             {
                 String[] var4 = var3.split("=");
 
@@ -74,7 +75,7 @@ public class StringTranslate
     {
         BufferedReader var3 = new BufferedReader(new InputStreamReader(StringTranslate.class.getResourceAsStream("/lang/" + par2Str + ".lang"), "UTF-8"));
 
-        for (String var4 = var3.readLine(); var4 != null; var4 = var3.readLine())
+        for (String var4 = BoundedLineReader.readLine(var3, 5_000_000); var4 != null; var4 = BoundedLineReader.readLine(var3, 5_000_000))
         {
             var4 = var4.trim();
 
