@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -99,7 +101,7 @@ public class ThreadDownloadResources extends Thread {
          if(!var8.exists() || var8.length() != p_1211_3_) {
             var8.getParentFile().mkdirs();
             String var9 = p_1211_2_.replaceAll(" ", "%20");
-            this.func_1212_a(new URL(p_1211_1_, var9), var8, p_1211_3_);
+            this.func_1212_a(Urls.create(p_1211_1_, var9, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS), var8, p_1211_3_);
             if(this.field_1769_c) {
                return;
             }
