@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class NoiseGeneratorPerlin extends NoiseGenerator
@@ -11,7 +12,7 @@ public class NoiseGeneratorPerlin extends NoiseGenerator
 
     public NoiseGeneratorPerlin()
     {
-        this(new Random());
+        this(new SecureRandom());
     }
 
     public NoiseGeneratorPerlin(Random par1Random)

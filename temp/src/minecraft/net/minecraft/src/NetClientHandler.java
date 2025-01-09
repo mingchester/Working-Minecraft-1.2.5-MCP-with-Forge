@@ -9,6 +9,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -141,7 +142,7 @@ public class NetClientHandler extends NetHandler {
    private Map field_35787_k = new HashMap();
    public List field_35786_c = new ArrayList();
    public int field_35785_d = 20;
-   Random field_1208_b = new Random();
+   Random field_1208_b = new SecureRandom();
 
 
    public NetClientHandler(Minecraft p_i42_1_, String p_i42_2_, int p_i42_3_) throws UnknownHostException, IOException {

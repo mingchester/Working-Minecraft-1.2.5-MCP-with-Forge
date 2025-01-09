@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class MapGenBase
@@ -8,7 +9,7 @@ public class MapGenBase
     protected int range = 8;
 
     /** The RNG used by the MapGen classes. */
-    protected Random rand = new Random();
+    protected Random rand = new SecureRandom();
 
     /** This world object. */
     protected World worldObj;

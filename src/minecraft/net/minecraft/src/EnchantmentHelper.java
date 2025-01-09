@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -10,7 +11,7 @@ import java.util.Random;
 public class EnchantmentHelper
 {
     /** Is the random seed of enchantment effects. */
-    private static final Random enchantmentRand = new Random();
+    private static final Random enchantmentRand = new SecureRandom();
 
     /**
      * Used to calculate the extra armor of enchantments on armors equipped on player.

@@ -1,10 +1,11 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Particle
 {
-    private static Random rand = new Random();
+    private static Random rand = new SecureRandom();
     public double posX;
     public double posY;
     public double prevPosX;

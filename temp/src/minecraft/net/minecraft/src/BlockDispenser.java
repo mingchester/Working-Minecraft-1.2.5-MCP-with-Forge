@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Block;
 import net.minecraft.src.BlockContainer;
@@ -26,7 +27,7 @@ import net.minecraft.src.World;
 
 public class BlockDispenser extends BlockContainer {
 
-   private Random field_28035_a = new Random();
+   private Random field_28035_a = new SecureRandom();
 
 
    protected BlockDispenser(int p_i200_1_) {

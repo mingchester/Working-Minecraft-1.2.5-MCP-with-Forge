@@ -9,6 +9,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +51,7 @@ public class NetClientHandler extends NetHandler
     public int currentServerMaxPlayers = 20;
 
     /** RNG. */
-    Random rand = new Random();
+    Random rand = new SecureRandom();
 
     public NetClientHandler(Minecraft par1Minecraft, String par2Str, int par3) throws UnknownHostException, IOException
     {

@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import java.io.File;
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.CodecMus;
 import net.minecraft.src.EntityLiving;
@@ -23,7 +24,7 @@ public class SoundManager {
    private int field_587_e = 0;
    private GameSettings field_586_f;
    private static boolean field_585_g = false;
-   private Random field_584_h = new Random();
+   private Random field_584_h = new SecureRandom();
    private int field_583_i;
 
 
