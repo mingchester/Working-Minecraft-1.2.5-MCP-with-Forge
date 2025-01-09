@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -196,14 +197,14 @@ public class World implements IBlockAccess
         this.weatherEffects = new ArrayList();
         this.cloudColour = 16777215L;
         this.skylightSubtracted = 0;
-        this.updateLCG = (new Random()).nextInt();
+        this.updateLCG = (new SecureRandom()).nextInt();
         this.DIST_HASH_MAGIC = 1013904223;
         this.lastLightningBolt = 0;
         this.lightningFlash = 0;
         this.editingBlocks = false;
         this.lockTimestamp = System.currentTimeMillis();
         this.autosavePeriod = 40;
-        this.rand = new Random();
+        this.rand = new SecureRandom();
         this.isNewWorld = false;
         this.worldAccesses = new ArrayList();
         this.villageCollectionObj = new VillageCollection(this);
@@ -241,14 +242,14 @@ public class World implements IBlockAccess
         this.weatherEffects = new ArrayList();
         this.cloudColour = 16777215L;
         this.skylightSubtracted = 0;
-        this.updateLCG = (new Random()).nextInt();
+        this.updateLCG = (new SecureRandom()).nextInt();
         this.DIST_HASH_MAGIC = 1013904223;
         this.lastLightningBolt = 0;
         this.lightningFlash = 0;
         this.editingBlocks = false;
         this.lockTimestamp = System.currentTimeMillis();
         this.autosavePeriod = 40;
-        this.rand = new Random();
+        this.rand = new SecureRandom();
         this.isNewWorld = false;
         this.worldAccesses = new ArrayList();
         this.villageCollectionObj = new VillageCollection(this);
@@ -292,14 +293,14 @@ public class World implements IBlockAccess
         this.weatherEffects = new ArrayList();
         this.cloudColour = 16777215L;
         this.skylightSubtracted = 0;
-        this.updateLCG = (new Random()).nextInt();
+        this.updateLCG = (new SecureRandom()).nextInt();
         this.DIST_HASH_MAGIC = 1013904223;
         this.lastLightningBolt = 0;
         this.lightningFlash = 0;
         this.editingBlocks = false;
         this.lockTimestamp = System.currentTimeMillis();
         this.autosavePeriod = 40;
-        this.rand = new Random();
+        this.rand = new SecureRandom();
         this.isNewWorld = false;
         this.worldAccesses = new ArrayList();
         this.villageCollectionObj = new VillageCollection(this);
@@ -3655,7 +3656,7 @@ public class World implements IBlockAccess
     public void randomDisplayUpdates(int par1, int par2, int par3)
     {
         byte var4 = 16;
-        Random var5 = new Random();
+        Random var5 = new SecureRandom();
 
         for (int var6 = 0; var6 < 1000; ++var6)
         {

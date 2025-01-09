@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.World;
@@ -7,7 +8,7 @@ import net.minecraft.src.World;
 public class MapGenBase {
 
    protected int field_1306_a = 8;
-   protected Random field_1305_b = new Random();
+   protected Random field_1305_b = new SecureRandom();
    protected World field_35625_d;
 
 

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.src.Block;
@@ -62,7 +63,7 @@ import net.minecraft.src.World;
 
 public class Item {
 
-   protected static Random field_4015_b = new Random();
+   protected static Random field_4015_b = new SecureRandom();
    public static Item[] field_233_c = new Item[32000];
    public static Item field_232_d = (new ItemSpade(0, EnumToolMaterial.IRON)).func_20010_a(2, 5).func_20011_a("shovelIron");
    public static Item field_231_e = (new ItemPickaxe(1, EnumToolMaterial.IRON)).func_20010_a(2, 6).func_20011_a("pickaxeIron");

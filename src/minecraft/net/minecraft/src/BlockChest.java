@@ -1,11 +1,12 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Iterator;
 import java.util.Random;
 
 public class BlockChest extends BlockContainer
 {
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     protected BlockChest(int par1)
     {

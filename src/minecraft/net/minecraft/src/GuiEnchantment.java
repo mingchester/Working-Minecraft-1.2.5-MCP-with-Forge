@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -9,7 +10,7 @@ public class GuiEnchantment extends GuiContainer
 {
     /** The book model used on the GUI. */
     private static ModelBook bookModel = new ModelBook();
-    private Random field_40230_x = new Random();
+    private Random field_40230_x = new SecureRandom();
 
     /** ContainerEnchantment object associated with this gui */
     private ContainerEnchantment containerEnchantment;
