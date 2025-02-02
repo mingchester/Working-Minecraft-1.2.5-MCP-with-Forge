@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -90,7 +91,7 @@ public class PostHttp
             StringBuffer var8 = new StringBuffer();
             String var7;
 
-            while ((var7 = var6.readLine()) != null)
+            while ((var7 = BoundedLineReader.readLine(var6, 5_000_000)) != null)
             {
                 var8.append(var7);
                 var8.append('\r');
