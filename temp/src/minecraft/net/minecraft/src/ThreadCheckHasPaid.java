@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import net.minecraft.client.Minecraft;
@@ -16,7 +18,7 @@ public class ThreadCheckHasPaid extends Thread {
 
    public void run() {
       try {
-         HttpURLConnection var1 = (HttpURLConnection)(new URL("https://login.minecraft.net/session?name=" + this.field_28146_a.field_6320_i.field_1666_b + "&session=" + this.field_28146_a.field_6320_i.field_6543_c)).openConnection();
+         HttpURLConnection var1 = (HttpURLConnection)(Urls.create("https://login.minecraft.net/session?name=" + this.field_28146_a.field_6320_i.field_1666_b + "&session=" + this.field_28146_a.field_6320_i.field_6543_c, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS)).openConnection();
          var1.connect();
          if(var1.getResponseCode() == 400 && this == null) {
             Minecraft.field_28005_H = System.currentTimeMillis();

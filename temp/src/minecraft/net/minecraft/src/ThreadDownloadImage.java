@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.imageio.ImageIO;
@@ -26,7 +28,7 @@ class ThreadDownloadImage extends Thread {
       HttpURLConnection var1 = null;
 
       try {
-         URL var2 = new URL(this.field_1216_a);
+         URL var2 = Urls.create(this.field_1216_a, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
          var1 = (HttpURLConnection)var2.openConnection();
          var1.setDoInput(true);
          var1.setDoOutput(false);

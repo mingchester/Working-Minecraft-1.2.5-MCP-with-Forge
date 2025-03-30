@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -17,7 +19,7 @@ public class PlayerUsageSnooper
     {
         try
         {
-            this.serverUrl = new URL("http://snoop.minecraft.net/" + par1Str);
+            this.serverUrl = Urls.create("http://snoop.minecraft.net/" + par1Str, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
         }
         catch (MalformedURLException var3)
         {
