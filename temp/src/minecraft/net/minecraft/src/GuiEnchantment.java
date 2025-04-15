@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.ContainerEnchantment;
 import net.minecraft.src.EnchantmentNameParts;
@@ -20,7 +21,7 @@ import org.lwjgl.util.glu.GLU;
 public class GuiEnchantment extends GuiContainer {
 
    private static ModelBook field_40220_w = new ModelBook();
-   private Random field_40230_x = new Random();
+   private Random field_40230_x = new SecureRandom();
    private ContainerEnchantment field_40228_y;
    public int field_40227_h;
    public float field_40229_i;

@@ -1,11 +1,12 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class EnchantmentNameParts {
 
    public static final EnchantmentNameParts field_40253_a = new EnchantmentNameParts();
-   private Random field_40251_b = new Random();
+   private Random field_40251_b = new SecureRandom();
    private String[] field_40252_c = "the elder scrolls klaatu berata niktu xyzzy bless curse light darkness fire air earth water hot dry cold wet ignite snuff embiggen twist shorten stretch fiddle destroy imbue galvanize enchant free limited range of towards inside sphere cube self other ball mental physical grow shrink demon elemental spirit animal creature beast humanoid undead fresh stale ".split(" ");
 
 

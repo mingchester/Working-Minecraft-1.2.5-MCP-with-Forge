@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import java.awt.Color;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,7 +21,7 @@ public class GuiIngame extends Gui
 
     /** A list with all the sent chat messages in it. */
     private List sentMessageList = new ArrayList();
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
     private Minecraft mc;
     private int updateCounter = 0;
 

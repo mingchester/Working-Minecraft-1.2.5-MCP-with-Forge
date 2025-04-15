@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class BlockFurnace extends BlockContainer
@@ -7,7 +8,7 @@ public class BlockFurnace extends BlockContainer
     /**
      * Is the random generator used by furnace to drop the inventory contents in random directions.
      */
-    private Random furnaceRand = new Random();
+    private Random furnaceRand = new SecureRandom();
 
     /** True if this is an active furnace, false if idle */
     private final boolean isActive;

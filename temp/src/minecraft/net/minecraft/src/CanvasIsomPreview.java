@@ -15,6 +15,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferStrategy;
 import java.awt.image.ImageObserver;
 import java.io.File;
+import java.security.SecureRandom;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -106,7 +107,7 @@ public class CanvasIsomPreview extends Canvas implements KeyListener, MouseListe
 
    public void func_1270_b(String p_1270_1_) {
       this.field_1785_i = this.field_1784_j = 0;
-      this.field_1790_d = new World(new SaveHandler(new File(this.field_1789_e, "saves"), p_1270_1_, false), p_1270_1_, new WorldSettings((new Random()).nextLong(), 0, true, false, WorldType.field_48635_b));
+      this.field_1790_d = new World(new SaveHandler(new File(this.field_1789_e, "saves"), p_1270_1_, false), p_1270_1_, new WorldSettings((new SecureRandom()).nextLong(), 0, true, false, WorldType.field_48635_b));
       this.field_1790_d.field_1046_e = 0;
       List var2 = this.field_1787_g;
       synchronized(this.field_1787_g) {

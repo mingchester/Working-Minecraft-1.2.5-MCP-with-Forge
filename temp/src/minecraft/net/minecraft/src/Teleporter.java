@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Block;
 import net.minecraft.src.Entity;
@@ -8,7 +9,7 @@ import net.minecraft.src.World;
 
 public class Teleporter {
 
-   private Random field_4232_a = new Random();
+   private Random field_4232_a = new SecureRandom();
 
 
    public void func_4107_a(World p_4107_1_, Entity p_4107_2_) {

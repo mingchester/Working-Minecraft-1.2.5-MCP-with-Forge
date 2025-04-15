@@ -3,6 +3,7 @@ package net.minecraft.src;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.SecureRandom;
 import java.text.Bidi;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +22,7 @@ public class FontRenderer {
    private int[] field_1307_b = new int[256];
    public int field_1308_a = 0;
    public int field_41063_b = 8;
-   public Random field_41064_c = new Random();
+   public Random field_41064_c = new SecureRandom();
    private byte[] field_44036_e = new byte[65536];
    private final int[] field_44034_f = new int[256];
    private int[] field_44035_g = new int[32];

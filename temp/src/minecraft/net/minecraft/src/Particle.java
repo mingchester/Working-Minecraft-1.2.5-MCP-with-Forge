@@ -1,11 +1,12 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.GuiParticle;
 
 public class Particle {
 
-   private static Random field_25128_s = new Random();
+   private static Random field_25128_s = new SecureRandom();
    public double field_25146_a;
    public double field_25145_b;
    public double field_25144_c;

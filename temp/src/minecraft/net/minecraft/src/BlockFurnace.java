@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Block;
 import net.minecraft.src.BlockContainer;
@@ -17,7 +18,7 @@ import net.minecraft.src.World;
 
 public class BlockFurnace extends BlockContainer {
 
-   private Random field_28036_a = new Random();
+   private Random field_28036_a = new SecureRandom();
    private final boolean field_456_a;
    private static boolean field_28037_c = false;
 

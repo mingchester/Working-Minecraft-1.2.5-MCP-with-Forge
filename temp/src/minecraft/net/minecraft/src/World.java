@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -133,14 +134,14 @@ public class World implements IBlockAccess {
       this.field_27173_e = new ArrayList();
       this.field_1019_F = 16777215L;
       this.field_1046_e = 0;
-      this.field_9437_g = (new Random()).nextInt();
+      this.field_9437_g = (new SecureRandom()).nextInt();
       this.field_9436_h = 1013904223;
       this.field_27168_F = 0;
       this.field_27172_i = 0;
       this.field_1043_h = false;
       this.field_1054_E = System.currentTimeMillis();
       this.field_9435_j = 40;
-      this.field_1037_n = new Random();
+      this.field_1037_n = new SecureRandom();
       this.field_1033_r = false;
       this.field_9434_r = new ArrayList();
       this.field_48465_A = new VillageCollection(this);
@@ -176,14 +177,14 @@ public class World implements IBlockAccess {
       this.field_27173_e = new ArrayList();
       this.field_1019_F = 16777215L;
       this.field_1046_e = 0;
-      this.field_9437_g = (new Random()).nextInt();
+      this.field_9437_g = (new SecureRandom()).nextInt();
       this.field_9436_h = 1013904223;
       this.field_27168_F = 0;
       this.field_27172_i = 0;
       this.field_1043_h = false;
       this.field_1054_E = System.currentTimeMillis();
       this.field_9435_j = 40;
-      this.field_1037_n = new Random();
+      this.field_1037_n = new SecureRandom();
       this.field_1033_r = false;
       this.field_9434_r = new ArrayList();
       this.field_48465_A = new VillageCollection(this);
@@ -224,14 +225,14 @@ public class World implements IBlockAccess {
       this.field_27173_e = new ArrayList();
       this.field_1019_F = 16777215L;
       this.field_1046_e = 0;
-      this.field_9437_g = (new Random()).nextInt();
+      this.field_9437_g = (new SecureRandom()).nextInt();
       this.field_9436_h = 1013904223;
       this.field_27168_F = 0;
       this.field_27172_i = 0;
       this.field_1043_h = false;
       this.field_1054_E = System.currentTimeMillis();
       this.field_9435_j = 40;
-      this.field_1037_n = new Random();
+      this.field_1037_n = new SecureRandom();
       this.field_1033_r = false;
       this.field_9434_r = new ArrayList();
       this.field_48465_A = new VillageCollection(this);
@@ -2551,7 +2552,7 @@ public class World implements IBlockAccess {
 
    public void func_677_m(int p_677_1_, int p_677_2_, int p_677_3_) {
       byte var4 = 16;
-      Random var5 = new Random();
+      Random var5 = new SecureRandom();
 
       for(int var6 = 0; var6 < 1000; ++var6) {
          int var7 = p_677_1_ + this.field_1037_n.nextInt(var4) - this.field_1037_n.nextInt(var4);

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -24,7 +25,7 @@ public class MapGenStronghold extends MapGenStructure
     {
         if (!this.ranBiomeCheck)
         {
-            Random var3 = new Random();
+            Random var3 = new SecureRandom();
             var3.setSeed(this.worldObj.getSeed());
             double var4 = var3.nextDouble() * Math.PI * 2.0D;
 

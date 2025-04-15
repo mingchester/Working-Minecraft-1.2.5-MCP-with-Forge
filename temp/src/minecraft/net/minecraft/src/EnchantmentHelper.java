@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -23,7 +24,7 @@ import net.minecraft.src.WeightedRandom;
 
 public class EnchantmentHelper {
 
-   private static final Random field_40649_a = new Random();
+   private static final Random field_40649_a = new SecureRandom();
    private static final EnchantmentModifierDamage field_40647_b = new EnchantmentModifierDamage((Empty3)null);
    private static final EnchantmentModifierLiving field_40648_c = new EnchantmentModifierLiving((Empty3)null);
 

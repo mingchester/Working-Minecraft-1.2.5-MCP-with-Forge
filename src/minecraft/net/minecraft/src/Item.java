@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -9,7 +10,7 @@ import net.minecraft.src.forge.ITextureProvider;
 public class Item implements ITextureProvider
 {
     /** The RNG used by the Item subclasses. */
-    protected static Random itemRand = new Random();
+    protected static Random itemRand = new SecureRandom();
 
     /** A 32000 elements Item array. */
     public static Item[] itemsList = new Item[32000];

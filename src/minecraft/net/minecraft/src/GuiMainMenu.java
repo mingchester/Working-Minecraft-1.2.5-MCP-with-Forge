@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,7 +18,7 @@ import cpw.mods.fml.common.FMLCommonHandler;
 public class GuiMainMenu extends GuiScreen
 {
     /** The RNG used by the Main Menu Screen. */
-    private static final Random rand = new Random();
+    private static final Random rand = new SecureRandom();
 
     /** Counts the number of screen updates. */
     private float updateCounter = 0.0F;

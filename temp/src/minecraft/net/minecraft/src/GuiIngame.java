@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import java.awt.Color;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -37,7 +38,7 @@ public class GuiIngame extends Gui {
    private static RenderItem field_930_d = new RenderItem();
    private List field_929_e = new ArrayList();
    private List field_50016_f = new ArrayList();
-   private Random field_9423_f = new Random();
+   private Random field_9423_f = new SecureRandom();
    private Minecraft field_9422_g;
    private int field_9421_h = 0;
    private String field_9420_i = "";

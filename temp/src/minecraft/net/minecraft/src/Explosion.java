@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,7 +18,7 @@ import net.minecraft.src.World;
 public class Explosion {
 
    public boolean field_12257_a = false;
-   private Random field_12250_h = new Random();
+   private Random field_12250_h = new SecureRandom();
    private World field_12249_i;
    public double field_12256_b;
    public double field_12255_c;

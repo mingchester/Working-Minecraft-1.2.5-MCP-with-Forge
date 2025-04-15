@@ -2,6 +2,7 @@ package net.minecraft.src;
 
 import java.io.File;
 import java.net.MalformedURLException;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,7 +12,7 @@ import net.minecraft.src.SoundPoolEntry;
 
 public class SoundPool {
 
-   private Random field_1661_c = new Random();
+   private Random field_1661_c = new SecureRandom();
    private Map field_1660_d = new HashMap();
    private List field_1659_e = new ArrayList();
    public int field_1658_a = 0;

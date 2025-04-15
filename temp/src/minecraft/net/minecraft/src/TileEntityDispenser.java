@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.IInventory;
@@ -11,7 +12,7 @@ import net.minecraft.src.TileEntity;
 public class TileEntityDispenser extends TileEntity implements IInventory {
 
    private ItemStack[] field_21102_a = new ItemStack[9];
-   private Random field_21101_b = new Random();
+   private Random field_21101_b = new SecureRandom();
 
 
    public int func_469_c() {

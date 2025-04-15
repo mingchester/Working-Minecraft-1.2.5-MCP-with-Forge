@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -14,7 +15,7 @@ public class ContainerEnchantment extends Container
     private int posX;
     private int posY;
     private int posZ;
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
 
     /** used as seed for EnchantmentNameParts (see GuiEnchantment) */
     public long nameSeed;

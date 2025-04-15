@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import java.io.File;
+import java.security.SecureRandom;
 import java.util.Random;
 
 import net.minecraft.src.forge.ForgeHooksClient;
@@ -37,7 +38,7 @@ public class SoundManager
     private static boolean loaded = false;
 
     /** RNG. */
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
     private int ticksBeforeMusic;
     
     public static int MUSIC_INTERVAL = 12000;

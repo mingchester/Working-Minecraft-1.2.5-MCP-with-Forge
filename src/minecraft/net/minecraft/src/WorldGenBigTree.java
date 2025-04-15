@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class WorldGenBigTree extends WorldGenerator
@@ -11,7 +12,7 @@ public class WorldGenBigTree extends WorldGenerator
     static final byte[] otherCoordPairs = new byte[] {(byte)2, (byte)0, (byte)0, (byte)1, (byte)2, (byte)1};
 
     /** random seed for GenBigTree */
-    Random rand = new Random();
+    Random rand = new SecureRandom();
 
     /** Reference to the World object. */
     World worldObj;
