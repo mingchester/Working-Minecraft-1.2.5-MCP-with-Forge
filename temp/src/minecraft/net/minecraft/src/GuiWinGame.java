@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
@@ -64,7 +65,7 @@ public class GuiWinGame extends GuiScreen {
             Random var5 = new Random(8124371L);
 
             int var6;
-            while((var1 = var4.readLine()) != null) {
+            while((var1 = BoundedLineReader.readLine(var4, 5_000_000)) != null) {
                String var7;
                String var8;
                for(var1 = var1.replaceAll("PLAYERNAME", this.field_945_b.field_6320_i.field_1666_b); var1.indexOf(var2) >= 0; var1 = var7 + "\u00a7f\u00a7k" + "XXXXXXXX".substring(0, var5.nextInt(4) + 3) + var8) {
@@ -83,7 +84,7 @@ public class GuiWinGame extends GuiScreen {
 
             var4 = new BufferedReader(new InputStreamReader(GuiWinGame.class.getResourceAsStream("/title/credits.txt"), Charset.forName("UTF-8")));
 
-            while((var1 = var4.readLine()) != null) {
+            while((var1 = BoundedLineReader.readLine(var4, 5_000_000)) != null) {
                var1 = var1.replaceAll("PLAYERNAME", this.field_945_b.field_6320_i.field_1666_b);
                var1 = var1.replaceAll("\t", "    ");
                this.field_41044_b.addAll(this.field_945_b.field_6314_o.func_50108_c(var1, var3));
