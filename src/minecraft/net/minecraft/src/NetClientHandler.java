@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
@@ -674,7 +676,7 @@ public class NetClientHandler extends NetHandler
         {
             try
             {
-                URL var4 = new URL("http://session.minecraft.net/game/joinserver.jsp?user=" + this.mc.session.username + "&sessionId=" + this.mc.session.sessionId + "&serverId=" + par1Packet2Handshake.username);
+                URL var4 = Urls.create("http://session.minecraft.net/game/joinserver.jsp?user=" + this.mc.session.username + "&sessionId=" + this.mc.session.sessionId + "&serverId=" + par1Packet2Handshake.username, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS);
                 BufferedReader var5 = new BufferedReader(new InputStreamReader(var4.openStream()));
                 String var6 = var5.readLine();
                 var5.close();
