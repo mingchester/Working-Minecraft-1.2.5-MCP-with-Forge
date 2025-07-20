@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 import net.minecraft.src.AxisAlignedBB;
@@ -15,7 +16,7 @@ import net.minecraft.src.World;
 
 public class BlockBrewingStand extends BlockContainer {
 
-   private Random field_40214_a = new Random();
+   private Random field_40214_a = new SecureRandom();
 
 
    public BlockBrewingStand(int p_i673_1_) {

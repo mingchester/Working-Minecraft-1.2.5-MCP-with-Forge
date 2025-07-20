@@ -1,12 +1,13 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class BlockDispenser extends BlockContainer
 {
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     protected BlockDispenser(int par1)
     {

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -17,7 +18,7 @@ public class EffectRenderer
     private RenderEngine renderer;
 
     /** RNG. */
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
 
     private Hashtable<String, ArrayList<EntityFX>> effectList = new Hashtable<String, ArrayList<EntityFX>>();
     

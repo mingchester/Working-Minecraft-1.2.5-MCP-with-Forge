@@ -2,6 +2,7 @@ package net.minecraft.src;
 
 import java.awt.image.BufferedImage;
 import java.nio.FloatBuffer;
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.client.Minecraft;
@@ -87,7 +88,7 @@ public class EntityRenderer {
    float field_35816_f = 0.0F;
    float field_35817_g = 0.0F;
    float field_35821_h = 0.0F;
-   private Random field_1383_m = new Random();
+   private Random field_1383_m = new SecureRandom();
    private int field_27287_H = 0;
    float[] field_35822_i;
    float[] field_35820_j;

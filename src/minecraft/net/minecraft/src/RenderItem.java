@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import net.minecraft.src.forge.ForgeHooksClient;
@@ -12,7 +13,7 @@ public class RenderItem extends Render
     private RenderBlocks renderBlocks = new RenderBlocks();
 
     /** The RNG used in RenderItem (for bobbing itemstacks on the ground) */
-    private Random random = new Random();
+    private Random random = new SecureRandom();
     public boolean field_27004_a = true;
 
     /** Defines the zLevel of rendering of item on GUI. */

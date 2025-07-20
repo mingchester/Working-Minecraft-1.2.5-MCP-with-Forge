@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,7 +20,7 @@ public class EffectRenderer {
    protected World field_1729_a;
    private List[] field_1728_b = new List[4];
    private RenderEngine field_1731_c;
-   private Random field_1730_d = new Random();
+   private Random field_1730_d = new SecureRandom();
 
 
    public EffectRenderer(World p_i275_1_, RenderEngine p_i275_2_) {

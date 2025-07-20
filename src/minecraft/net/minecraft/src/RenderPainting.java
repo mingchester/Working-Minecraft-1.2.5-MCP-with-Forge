@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -7,7 +8,7 @@ import org.lwjgl.opengl.GL12;
 public class RenderPainting extends Render
 {
     /** RNG. */
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
 
     public void func_158_a(EntityPainting par1EntityPainting, double par2, double par4, double par6, float par8, float par9)
     {

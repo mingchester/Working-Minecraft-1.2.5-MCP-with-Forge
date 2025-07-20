@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import org.lwjgl.input.Keyboard;
 
@@ -174,7 +175,7 @@ public class GuiCreateWorld extends GuiScreen
                 }
 
                 this.createClicked = true;
-                long var2 = (new Random()).nextLong();
+                long var2 = (new SecureRandom()).nextLong();
                 String var4 = this.textboxSeed.getText();
 
                 if (!MathHelper.stringNullOrLengthZero(var4))

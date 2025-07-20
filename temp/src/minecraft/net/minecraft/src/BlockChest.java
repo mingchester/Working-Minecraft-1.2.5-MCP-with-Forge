@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Iterator;
 import java.util.Random;
 import net.minecraft.src.AxisAlignedBB;
@@ -23,7 +24,7 @@ import net.minecraft.src.World;
 
 public class BlockChest extends BlockContainer {
 
-   private Random field_457_a = new Random();
+   private Random field_457_a = new SecureRandom();
 
 
    protected BlockChest(int p_i595_1_) {

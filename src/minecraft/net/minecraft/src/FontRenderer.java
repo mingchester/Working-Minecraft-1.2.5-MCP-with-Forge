@@ -3,6 +3,7 @@ package net.minecraft.src;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.SecureRandom;
 import java.text.Bidi;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,7 @@ public class FontRenderer
 
     /** the height in pixels of default text */
     public int FONT_HEIGHT = 8;
-    public Random fontRandom = new Random();
+    public Random fontRandom = new SecureRandom();
 
     /**
      * Array of the start/end column (in upper/lower nibble) for every glyph in the /font directory.

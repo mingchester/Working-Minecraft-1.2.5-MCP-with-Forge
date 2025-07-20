@@ -2,6 +2,7 @@ package net.minecraft.src;
 
 import java.awt.image.BufferedImage;
 import java.nio.FloatBuffer;
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.client.Minecraft;
@@ -119,7 +120,7 @@ public class EntityRenderer
 
     /** Torch flicker DY */
     float torchFlickerDY = 0.0F;
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     /** Rain sound counter */
     private int rainSoundCounter = 0;

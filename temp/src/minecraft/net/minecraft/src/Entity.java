@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.src.AxisAlignedBB;
@@ -114,7 +115,7 @@ public abstract class Entity {
       this.field_9286_aZ = 0.0F;
       this.field_9314_ba = false;
       this.field_632_aO = 0.0F;
-      this.field_9312_bd = new Random();
+      this.field_9312_bd = new SecureRandom();
       this.field_9311_be = 0;
       this.field_9310_bf = 1;
       this.field_9309_bg = 0;

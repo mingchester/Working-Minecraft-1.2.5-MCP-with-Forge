@@ -1,11 +1,12 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class BlockBrewingStand extends BlockContainer
 {
-    private Random rand = new Random();
+    private Random rand = new SecureRandom();
 
     public BlockBrewingStand(int par1)
     {

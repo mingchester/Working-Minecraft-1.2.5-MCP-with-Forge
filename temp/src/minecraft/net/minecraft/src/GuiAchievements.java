@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Achievement;
 import net.minecraft.src.AchievementList;
@@ -174,7 +175,7 @@ public class GuiAchievements extends GuiScreen {
       int var13 = var5 + 288 >> 4;
       int var14 = (var4 + 288) % 16;
       int var15 = (var5 + 288) % 16;
-      Random var21 = new Random();
+      Random var21 = new SecureRandom();
 
       int var22;
       int var24;

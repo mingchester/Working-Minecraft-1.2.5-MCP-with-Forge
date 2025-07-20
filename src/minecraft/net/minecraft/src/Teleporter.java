@@ -1,11 +1,12 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Teleporter
 {
     /** A private Random() function in Teleporter */
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     /**
      * Place an entity in a nearby portal, creating one if necessary.

@@ -1,5 +1,6 @@
 package net.minecraft.src;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import net.minecraft.src.Block;
 import net.minecraft.src.Entity;
@@ -17,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 public class RenderItem extends Render {
 
    private RenderBlocks field_201_d = new RenderBlocks();
-   private Random field_200_e = new Random();
+   private Random field_200_e = new SecureRandom();
    public boolean field_27004_a = true;
    public float field_40268_b = 0.0F;
 
